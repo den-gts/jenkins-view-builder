@@ -26,6 +26,7 @@ class JenkinsViewBuilder(App):
         self.log.debug('clean up %s', cmd.__class__.__name__)
         if err:
             self.log.debug('got an error: %s', err)
+            raise err
 
 
 def main(argv=sys.argv[1:]):

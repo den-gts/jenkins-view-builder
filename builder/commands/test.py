@@ -36,7 +36,7 @@ class Test(Command):
         if not os.path.exists(out_dir):
             os.makedirs(out_dir)
         for yaml_location in parsed_args.yaml:
-            if os.path.isdir(yaml_location):
+            if yaml_location and os.path.isdir(yaml_location):
                 yaml_files = glob.glob(os.path.join(yaml_location, '*.yml'))
             else:
                 yaml_files = [yaml_location]

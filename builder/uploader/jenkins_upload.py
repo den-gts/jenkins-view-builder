@@ -32,7 +32,7 @@ def post(url, payload, config):
                       verify=False)
     response = krb_request(do_post, config)
     if response is not None and response.status_code != 200:
-        print(response.text)
+        print(response.content)
 
 
 def update(config, view_name, view_xml):
